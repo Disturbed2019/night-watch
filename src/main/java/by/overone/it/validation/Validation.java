@@ -3,11 +3,12 @@ package by.overone.it.validation;
 import by.overone.it.entity.User;
 import by.overone.it.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Component
 public class Validation {
     @Autowired
     private UserService userService;
