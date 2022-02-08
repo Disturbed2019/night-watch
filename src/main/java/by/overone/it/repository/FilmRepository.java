@@ -28,7 +28,7 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     List<Film> updateYear(@Param("id") String id, @Param("year") String year);
 
     @Modifying
-    @Query("update Film f set f.bgImg=:bg_img where f.id=:id")
+    @Query("update Film f set f.bgImg=:bgImg where f.id=:id")
     List<Film> updateBgImg(@Param("id") String id, @Param("bgImg") String bgImg);
 
     @Modifying
@@ -36,7 +36,7 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     List<Film> updateDescription(@Param("id") String id, @Param("description") String description);
 
     @Modifying
-    @Query("update Film f set f.previewImg=:preview_img where f.id=:id")
+    @Query("update Film f set f.previewImg=:previewImg where f.id=:id")
     List<Film> updatePreviewImg(@Param("id") String id, @Param("previewImg") String previewImg);
 
     @Modifying
@@ -44,6 +44,6 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     List<Film> updateTrailerLink(@Param("id") String id, @Param("trailerLink") String trailerLink);
 
     @Modifying
-    @Query("update Film f set f.rating=:bg_img where f.id=:id")
+    @Query("update Film f set f.rating=:bgImg where f.id=:id")
     List<Film> updateRating(@Param("id") String id, @Param("rating") String rating);
 }
