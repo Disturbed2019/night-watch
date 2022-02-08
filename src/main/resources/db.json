@@ -1,0 +1,598 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "mail": "qwerty@bk.ru",
+      "pass": "123456",
+      "avatarURL": "",
+      "admin": true
+    },
+    {
+      "id": "2",
+      "name": "User",
+      "mail": "123@bk.ru",
+      "pass": "123456",
+      "avatarURL": "",
+      "admin": false
+    }
+  ],
+  "films": [
+    {
+      "id": "1",
+      "category": "horror",
+      "title": "Чужой",
+      "description": "Группа космонавтов высаживается на неизвестной планете и знакомится с ксеноморфом. Шедевр Ридли Скотта",
+      "preview_img": "./images/posters/alien.jpg",
+      "trailer_link": "jQ5lPt9edzQ",
+      "rating": "8.1"
+    },
+    {
+      "id": "2",
+      "category": "horror",
+      "title": "28 дней спустя",
+      "description": "Джим очнулся в пустующем Лондоне, кишащем зомби. Блестящий хоррор Дэнни Бойла о смертельном вирусе",
+      "preview_img": "./images/posters/28days.jpg",
+      "trailer_link": "FcDhdb6J3rM",
+      "rating": "7.5"
+    },
+    {
+      "id": "3",
+      "category": "horror",
+      "title": "Новая эра Z",
+      "description": "Группа выживших и девочка-зомби блуждают по зараженному миру. Апокалиптичная драма от создателя «Шерлока»",
+      "preview_img": "./images/posters/new_z.jpg",
+      "trailer_link": "t81Pa83z37k",
+      "rating": "6.2"
+    },
+    {
+      "id": "4",
+      "category": "horror",
+      "title": "Хребет дьявола",
+      "description": "Попав в приют, Карлос знакомится с призраком. Хоррор, который Гильермо дель Торро считает своим лучшим фильмом",
+      "preview_img": "./images/posters/devil_below.jpg",
+      "trailer_link": "o7I7VwWQqM8",
+      "rating": "7.2"
+    },
+    {
+      "id": "5",
+      "category": "horror",
+      "title": "Ночной дозор",
+      "description": "Маги и вампиры в современной Москве. Фильм, доказавший, что российские блокбастеры не уступают голливудским",
+      "preview_img": "./images/posters/night.jpg",
+      "trailer_link": "buEOz6DfiUo",
+      "rating": "6.1"
+    },
+    {
+      "id": "6",
+      "category": "horror",
+      "title": "Константин",
+      "description": "Охотник на демонов противостоит сверхъестественным силам. Сериальная версия одноименного фильма с Киану Ривзом",
+      "preview_img": "",
+      "trailer_link": "1qpxWrXH0A8",
+      "rating": "6,9"
+    },
+    {
+      "id": "7",
+      "category": "horror",
+      "title": "Оно",
+      "description": "Злобный клоун терроризирует подростков. Экранизация романа Стивена Кинга с жутким Биллом Скарсгардом",
+      "preview_img": "",
+      "trailer_link": "IisU-JHj_fU",
+      "rating": "7.3"
+    },
+    {
+      "id": "8",
+      "category": "horror",
+      "title": "Зеркала",
+      "description": "Спившийся полицейский раскрывает тайну зеркал-убийц. Ужасающий триллер о демонах, таящихся в отражении",
+      "preview_img": "",
+      "trailer_link": "LkMV-YTZsb8",
+      "rating": "7.1"
+    },
+    {
+      "id": "9",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "10",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "11",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "12",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "13",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "14",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "15",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "16",
+      "category": "comedy",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "17",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "18",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "19",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "20",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "21",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "22",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "23",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "24",
+      "category": "action",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "25",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "26",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "27",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "28",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "29",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "30",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "31",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "32",
+      "category": "sci-fi",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "33",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "34",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "35",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "36",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "37",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "38",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "39",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "40",
+      "category": "drama",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "41",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "42",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "43",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "44",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "45",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "46",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "47",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "48",
+      "category": "romance",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "49",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "50",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "51",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "52",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "53",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "54",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "55",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "56",
+      "category": "historical",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "57",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "58",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "59",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "60",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "61",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "62",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "63",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    },
+    {
+      "id": "64",
+      "category": "documentary",
+      "title": "",
+      "description": "",
+      "preview_img": "",
+      "trailer_link": "",
+      "rating": ""
+    }
+  ]
+}
