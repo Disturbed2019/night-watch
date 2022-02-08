@@ -26,11 +26,20 @@ public class Film {
     private String title;
 
     @Setter
+    private String year;
+
+    @Setter
+    private String bgImg;
+
+    @Setter
     private String description;
 
     @Setter
-    private String preview_img;
+    private String previewImg;
 
     @Setter
-    private String trailer_link;
+    private String trailerLink;
+
+    @Setter
+    private String rating;
 }

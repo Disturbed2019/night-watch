@@ -24,14 +24,26 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     List<Film> updateTitle(@Param("id") String id, @Param("title") String title);
 
     @Modifying
+    @Query("update Film f set f.year=:year where f.id=:id")
+    List<Film> updateYear(@Param("id") String id, @Param("year") String year);
+
+    @Modifying
+    @Query("update Film f set f.bgImg=:bg_img where f.id=:id")
+    List<Film> updateBgImg(@Param("id") String id, @Param("bgImg") String bgImg);
+
+    @Modifying
     @Query("update Film f set f.description=:description where f.id=:id")
     List<Film> updateDescription(@Param("id") String id, @Param("description") String description);
 
     @Modifying
-    @Query("update Film f set f.preview_img=:preview_img where f.id=:id")
-    List<Film> updatePreviewImg(@Param("id") String id, @Param("preview_img") String preview_img);
+    @Query("update Film f set f.previewImg=:preview_img where f.id=:id")
+    List<Film> updatePreviewImg(@Param("id") String id, @Param("previewImg") String previewImg);
 
     @Modifying
-    @Query("update Film f set f.trailer_link=:trailer_link where f.id=:id")
-    List<Film> updateTrailerLink(@Param("id") String id, @Param("trailer_link") String trailer_link);
+    @Query("update Film f set f.trailerLink=:trailerLink where f.id=:id")
+    List<Film> updateTrailerLink(@Param("id") String id, @Param("trailerLink") String trailerLink);
+
+    @Modifying
+    @Query("update Film f set f.rating=:bg_img where f.id=:id")
+    List<Film> updateRating(@Param("id") String id, @Param("rating") String rating);
 }
