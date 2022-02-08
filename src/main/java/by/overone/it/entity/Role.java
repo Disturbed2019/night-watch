@@ -1,8 +1,10 @@
 package by.overone.it.entity;
 
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import javax.websocket.OnError;
 import java.util.Set;
 
 @Entity
@@ -10,7 +12,6 @@ import java.util.Set;
 public class Role implements GrantedAuthority {
 
     @Id
-
     private String id;
 
     private String name;
