@@ -1,5 +1,6 @@
 package by.overone.it.entity;
 
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -12,8 +13,9 @@ import java.util.Set;
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(generator = "uuid-generator")
+    @GenericGenerator(name = "uuid-generator", strategy = "uuid")
+    private String id;
 
     private String username;
 
@@ -28,11 +30,11 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

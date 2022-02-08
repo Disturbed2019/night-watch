@@ -10,31 +10,32 @@ import java.util.Set;
 public class Role implements GrantedAuthority {
 
     @Id
-    private Long id;
+
+    private String id;
 
     private String name;
 
     @Transient
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
+    @OneToOne(mappedBy = "roles")
+    private User users;
 
     public Role() {
     }
 
-    public Role(Long id) {
+    public Role(String  id) {
         this.id = id;
     }
 
-    public Role(Long id, String name) {
+    public Role(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -46,11 +47,11 @@ public class Role implements GrantedAuthority {
         this.name = name;
     }
 
-    public Set<User> getUsers() {
+    public User getUsers() {
         return users;
     }
 
-    public void setUsers(Set<User> users) {
+    public void setUsers(User users) {
         this.users = users;
     }
 

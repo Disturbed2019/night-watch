@@ -1,26 +1,80 @@
 package by.overone.it.service;
 
+import by.overone.it.entity.Role;
 import by.overone.it.entity.User;
+import by.overone.it.repository.RoleRepository;
 import by.overone.it.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
+
+    @PersistenceContext
+    private EntityManager em;
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
 
-    public void saveUser(User user) {
+    @Autowired
+    RoleRepository roleRepository;
+
+    @Autowired
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByUsername(username);
+
+        if (user == null) {
+            throw new UsernameNotFoundException("User not found");
+        }
+
+        return user;
+    }
+
+    public User findUserById(String userId) {
+        Optional<User> userFromDb = userRepository.findById(userId);
+        return userFromDb.orElse(new User());
+    }
+
+    public List<User> allUsers() {
+        return userRepository.findAll();
+    }
+
+    public boolean saveUser(User user) {
+        User userFromDB = userRepository.findByUsername(user.getUsername());
+
+        if (userFromDB != null) {
+            return false;
+        }
+
+        user.setRoles(Collections.singleton(new Role("1", "ROLE_USER")));
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userRepository.save(user);
+        return true;
     }
 
-    public void deleteUser(User user) {
-        userRepository.delete(user);
+    public boolean deleteUser(String userId) {
+        if (userRepository.findById(userId).isPresent()) {
+            userRepository.deleteById(userId);
+            return true;
+        }
+        return false;
     }
 
-    public User getUserByUsername(String userName) {
-        return userRepository.getUserByUserName(userName);
+    public List<User> usergtList(String idMin) {
+        return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)
+                .setParameter("paramId", idMin).getResultList();
     }
-
 }
