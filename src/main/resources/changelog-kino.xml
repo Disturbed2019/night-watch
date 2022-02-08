@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet id="1" author="tokamo">
+        <sql>
+            CREATE TABLE IF NOT EXISTS t_user (
+            id varchar(100) PRIMARY KEY,
+            username varchar(20) NOT NULL,
+            password varchar(100) NOT NULL
+            );
+        </sql>
+        <sql>
+            CREATE TABLE IF NOT EXISTS t_role (
+            id varchar(100) PRIMARY KEY,
+            name varchar(50) NOT NULL
+            );
+        </sql>
+        <sql>
+            CREATE TABLE IF NOT EXISTS film (
+            id varchar(100) PRIMARY KEY,
+            category varchar(100) NOT NULL,
+            description varchar(500) NOT NULL,
+            preview_img varchar(100) NOT NULL,
+            title varchar(100) NOT NULL,
+            trailer_link varchar(100) NOT NULL
+            );
+        </sql>
+        <sql>
+            CREATE TABLE IF NOT EXISTS t_user_roles (
+            user_id varchar(100) PRIMARY KEY,
+            roles_id varchar(100) NOT NULL
+            )
+        </sql>
+        <sql>
+            INSERT INTO t_role(id, name) VALUES (1, 'ROLE_USER'), (2, 'ROLE_ADMIN');
+            INSERT INTO t_user(id, password, username) VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 'ADMIN', 'ADMIN');
+            INSERT INTO t_user_roles(user_id, roles_id) VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 2);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
