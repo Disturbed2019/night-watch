@@ -44,6 +44,6 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     List<Film> updateTrailerLink(@Param("id") String id, @Param("trailerLink") String trailerLink);
 
     @Modifying
-    @Query("update Film f set f.rating=:bgImg where f.id=:id")
+    @Query("update Film f set f.rating=:rating where f.id=:id")
     List<Film> updateRating(@Param("id") String id, @Param("rating") String rating);
 }
