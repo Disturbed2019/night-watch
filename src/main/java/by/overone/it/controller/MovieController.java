@@ -30,38 +30,38 @@ public class MovieController {
         return "movie-page";
     }
 
-    @GetMapping("/romance")
-    public String showRomancePage(Model model) {
-        List<Film> romanceList = filmService.getRomanceFilms();
-        model.addAttribute("filmList", romanceList);
-        return "movies";
-    }
+//    @GetMapping("/romance")
+//    public String showRomancePage(Model model) {
+//        List<Film> romanceList = filmService.getRomanceFilms();
+//        model.addAttribute("filmList", romanceList);
+//        return "movies";
+//    }
 
-    @GetMapping("/drama")
-    public String showDramaPage(Model model) {
-        List<Film> dramaList = filmService.getDramaFilms();
-        model.addAttribute("filmList", dramaList);
-        return "movies";
-    }
-
-    @GetMapping("/historical")
-    public String showRomancePage(Model model) {
-        List<Film> historicalList = filmService.getHistoricalFilms();
-        model.addAttribute("filmList", historicalList);
-        return "movies";
-    }
-
-    @GetMapping("/romance")
-    public String showRomancePage(Model model) {
-        List<Film> romanceList = filmService.getRomanceFilms();
-        model.addAttribute("filmList", romanceList);
-        return "movies";
-    }
-
-    @GetMapping("/romance")
-    public String showRomancePage(Model model) {
-        List<Film> romanceList = filmService.getRomanceFilms();
-        model.addAttribute("filmList", romanceList);
-        return "movies";
-    }
+//    @GetMapping("/drama")
+//    public String showDramaPage(Model model) {
+//        List<Film> dramaList = filmService.getDramaFilms();
+//        model.addAttribute("filmList", dramaList);
+//        return "movies";
+//    }
+//
+//    @GetMapping("/historical")
+//    public String showRomancePage(Model model) {
+//        List<Film> historicalList = filmService.getHistoricalFilms();
+//        model.addAttribute("filmList", historicalList);
+//        return "movies";
+//    }
+//
+//    @GetMapping("/romance")
+//    public String showRomancePage(Model model) {
+//        List<Film> romanceList = filmService.getRomanceFilms();
+//        model.addAttribute("filmList", romanceList);
+//        return "movies";
+//    }
+//
+//    @GetMapping("/romance")
+//    public String showRomancePage(Model model) {
+//        List<Film> romanceList = filmService.getRomanceFilms();
+//        model.addAttribute("filmList", romanceList);
+//        return "movies";
+//    }
 }
