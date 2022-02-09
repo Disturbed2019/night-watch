@@ -1,6 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -20,7 +22,7 @@
                               <a class="menu__list-link active" href="/">Home</a>
                           </li>
                           <li class="menu__list-item">
-                              <a class="menu__list-link" href="movie_page.jsp">Movies</a>
+                              <a class="menu__list-link" href="/movies">Movies</a>
                           </li>
                           <li class="menu__list-item">
                               <a class="menu__list-link" href="actors.jsp">Actors</a>

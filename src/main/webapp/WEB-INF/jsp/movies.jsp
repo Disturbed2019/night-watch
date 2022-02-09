@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -64,9 +65,9 @@
     <main class="main">
         <div class="container">
             <div class="movies__list">
-                <c:forEach items="${film}" var="film">
-                    <a class="movies__link" href="${film.getTitle()}">
-                        <img src="${film.getPreviewImg()}" alt="">
+                <c:forEach var="filmList" items="${filmList}">
+                    <a class="movies__link" href="/movie-page-${filmList.getId()}">
+                        <img src="${filmList.getPreviewImg()}" alt="">
                     </a>
                 </c:forEach>
             </div>
