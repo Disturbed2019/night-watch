@@ -5,6 +5,8 @@ import by.overone.it.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FilmService {
 
@@ -13,6 +15,14 @@ public class FilmService {
 
     public void saveFilm(Film film) {
         filmRepository.save(film);
+    }
+
+    public Film getFilmById(String id) {
+        return filmRepository.getFilmById(id);
+    }
+
+    public List<Film> getFilmList() {
+        return filmRepository.findAll();
     }
 
     public Film findFirst(String category) {

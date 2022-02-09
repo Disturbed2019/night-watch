@@ -17,6 +17,9 @@ public interface FilmRepository extends JpaRepository<Film, String> {
 
     Film findFirstByCategory(String category);
 
+    @Query("from Film where id =:id")
+    Film getFilmById(@Param("id") String id);
+
     @Modifying
     @Query("update Film f set f.category=:category where f.id=:id")
     List<Film> updateCategory(@Param("id") String id, @Param("category") String category);
