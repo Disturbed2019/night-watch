@@ -48,4 +48,26 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     @Modifying
     @Query("update Film f set f.rating=:rating where f.id=:id")
     List<Film> updateRating(@Param("id") String id, @Param("rating") String rating);
+
+
+    @Query("select * from Film f where f.category = 'horror'")
+    List<Film> getHorrorFilms();
+
+    @Query("select * from Film where category = 'comedy'")
+    List<Film> getComedyFilms();
+
+    @Query("select * from Film where category = 'action'")
+    List<Film> getActionFilms();
+
+    @Query("select * from Film where category = 'sci-fi'")
+    List<Film> getSciFiFilms();
+
+    @Query("select * from Film where category = 'drama'")
+    List<Film> getDramaFilms();
+
+    @Query("select * from Film where category = 'romance'")
+    List<Film> getRomanceFilms();
+
+    @Query("select * from Film where category = 'historical'")
+    List<Film> getHistoricalFilms();
 }

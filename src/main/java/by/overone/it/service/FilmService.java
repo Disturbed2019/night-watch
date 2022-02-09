@@ -5,6 +5,8 @@ import by.overone.it.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FilmService {
 
@@ -53,5 +55,33 @@ public class FilmService {
 
     public  void updateRatingFilm(String id, String rating) {
         filmRepository.updateRating(id, rating);
+    }
+
+    public List<Film> romanceList() {
+        return filmRepository.getRomanceFilms();
+    }
+
+    public List<Film> historicalList() {
+        return filmRepository.getHistoricalFilms();
+    }
+
+    public List<Film> dramaList() {
+        return filmRepository.getDramaFilms();
+    }
+
+    public List<Film> sciFiList() {
+        return filmRepository.getSciFiFilms();
+    }
+
+    public List<Film> actionList() {
+        return filmRepository.getActionFilms();
+    }
+
+    public List<Film> comedyList() {
+        return filmRepository.getComedyFilms();
+    }
+
+    public List<Film> horrorList() {
+        return filmRepository.getHorrorFilms();
     }
 }
