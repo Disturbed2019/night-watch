@@ -88,8 +88,6 @@
                             <button class="btn btn__form" type="submit">Sigh in</button>
                             </form:form>
 
-
-
                             <!--                       вставка формы входа -->
 
                     </div>
