@@ -15,6 +15,10 @@ public class FilmService {
         filmRepository.save(film);
     }
 
+    public Film findFirst(String category) {
+        return filmRepository.findFirstByCategory(category);
+    }
+
     public void deleteFilm(Film film) {
         filmRepository.delete(film);
     }

@@ -15,6 +15,8 @@ import java.util.List;
 @Transactional
 public interface FilmRepository extends JpaRepository<Film, String> {
 
+    Film findFirstByCategory(String category);
+
     @Modifying
     @Query("update Film f set f.category=:category where f.id=:id")
     List<Film> updateCategory(@Param("id") String id, @Param("category") String category);
