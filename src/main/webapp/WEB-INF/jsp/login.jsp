@@ -73,18 +73,24 @@
                     <div class="authorization__login " data-tabs-form="login">
 
                         <!--                       вставка формы входа -->
-                        <form method="POST" action="/login" class="form">
-                            <h2 class="form__title">Sign in</h2>
-                            <div class="form__content">
-                                <input name="username" type="text" placeholder="Username"
-                                       autofocus="true"/>
-                                <input name="password" type="password" placeholder="Password"/>
-                                <button class="btn btn__form" type="submit">Log In</button>
-                                <!--                                <a class="form__link" href="/registration">Зарегистрироваться</a>-->
+                        <form:form method="POST" modelAttribute="userLoginForm" cssClass="form">
+                        <h2 class="form__title">Sigh in</h2>
+                        <div class="form__content">
+                            <div>
+                                <form:input type="text" path="username" placeholder="Username"
+                                            autofocus="true"></form:input>
                             </div>
-                        </form>
+                            <div>
+                                <form:input type="password" path="password" placeholder="Password"></form:input>
+                                <form:errors path="password"></form:errors>
+                                    ${passwordLoginError}
+                            </div>
+                            <button class="btn btn__form" type="submit">Sigh in</button>
+                            </form:form>
 
-                        <!--                       вставка формы входа -->
+
+
+                            <!--                       вставка формы входа -->
 
                     </div>
                     <div class="authorization__register hidden " data-tabs-form="register">

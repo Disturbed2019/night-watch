@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="../../css/style.min.css">
 </head>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <body>
 <div class="wrapper">
     <header class="header">
@@ -27,6 +29,9 @@
                           </li>
                           <li class="menu__list-item">
                               <a class="menu__list-link" href="/login_form">Sign in</a>
+                          </li>
+                          <li class="menu__list-item">
+                              <a class="menu__list-link" href="/registration">Sign Up</a>
                           </li>
                       </ul>
                   </nav>
@@ -49,7 +54,7 @@
                               </a>
                           </li>
                           <li class="menu-account__list-item">
-                              <a class="menu-account__list-link" href="/registration">
+                              <a class="menu-account__list-link" href="#" >
                                   <svg class="icon">
                                       <use xlink:href="./icons/sprite.svg#account"></use>
                                   </svg>
