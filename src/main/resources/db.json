@@ -47,7 +47,7 @@
       "year": "2013",
       "bg_img": "./images/backgrounds/new_z.jpg",
       "description": "Группа выживших и девочка-зомби блуждают по зараженному миру. Апокалиптичная драма от создателя «Шерлока»",
-      "preview_img": "./images/posters/new_z_bg.jpg",
+      "preview_img": "./images/posters/new_z.jpg",
       "trailer_link": "t81Pa83z37k",
       "rating": "6.2"
     },
@@ -58,7 +58,7 @@
       "year": "2001",
       "bg_img": "./images/backgrounds/devil_below_bg.jpg",
       "description": "Попав в приют, Карлос знакомится с призраком. Хоррор, который Гильермо дель Торро считает своим лучшим фильмом",
-      "preview_img": "./images/posters/devil_below.jpg",
+      "preview_img": "./images/posters/devil_below.jpeg",
       "trailer_link": "o7I7VwWQqM8",
       "rating": "7.2"
     },
@@ -80,7 +80,7 @@
       "year": "2005",
       "bg_img": "./images/backgrounds/constantine_bg.jpg",
       "description": "Охотник на демонов противостоит сверхъестественным силам. Сериальная версия одноименного фильма с Киану Ривзом",
-      "preview_img": "./images/poster/constantine.jpg",
+      "preview_img": "./images/posters/constantine.jpg",
       "trailer_link": "1qpxWrXH0A8",
       "rating": "6,9"
     },
@@ -91,7 +91,7 @@
       "year": "2017",
       "bg_img": "./images/backgrounds/it_bg.jpg",
       "description": "Злобный клоун терроризирует подростков. Экранизация романа Стивена Кинга с жутким Биллом Скарсгардом",
-      "preview_img": "./images/poster/it.jpeg",
+      "preview_img": "./images/posters/it.jpeg",
       "trailer_link": "IisU-JHj_fU",
       "rating": "7.3"
     },
@@ -102,7 +102,7 @@
       "year": "2008",
       "bg_img": "./images/backgrounds/mirrors_bg.jpg",
       "description": "Спившийся полицейский раскрывает тайну зеркал-убийц. Ужасающий триллер о демонах, таящихся в отражении",
-      "preview_img": "./images/posters/mirrors.jpg",
+      "preview_img": "./images/posters/mirors.jpg",
       "trailer_link": "LkMV-YTZsb8",
       "rating": "7.1"
     },
@@ -157,7 +157,7 @@
       "year": "1993",
       "bg_img": "./images/backgrounds/ace_bg.jpg",
       "description": "Оглушительно смешные приключения звериного детектива. В главной роли — Джим Керри",
-      "preview_img": "./images/posters/ace_pos.jpg",
+      "preview_img": "./images/posters/ace_pos.jpeg",
       "trailer_link": "mb6k76m7aro",
       "rating": "7.8"
     },
