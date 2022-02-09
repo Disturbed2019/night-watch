@@ -18,16 +18,16 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <a class="menu__list-link " href="index.jsp">Home</a>
+                            <a class="menu__list-link " href="/">Home</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="movie_page.jsp">Movies</a>
+                            <a class="menu__list-link" href="/movies">Movies</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="actors.jsp">Actors</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="registration.jsp">Sign in</a>
+                            <a class="menu__list-link" href="/registration">Sign in</a>
                         </li>
                     </ul>
                 </nav>
@@ -50,7 +50,7 @@
                             </a>
                         </li>
                         <li class="menu-account__list-item">
-                            <a class="menu-account__list-link" href="registration.jsp">
+                            <a class="menu-account__list-link" href="/registration">
                                 <svg class="icon">
                                     <use xlink:href="./icons/sprite.svg#account"></use>
                                 </svg>
