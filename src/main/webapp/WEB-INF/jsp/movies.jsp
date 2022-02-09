@@ -18,10 +18,10 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <a class="menu__list-link " href="index.jsp">Home</a>
+                            <a class="menu__list-link " href="/">Home</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link active" href="movie_page.jsp">Movies</a>
+                            <a class="menu__list-link active" href="/movies">Movies</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="actors.jsp">Actors</a>
