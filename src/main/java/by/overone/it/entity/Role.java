@@ -1,27 +1,29 @@
 package by.overone.it.entity;
 
-import org.hibernate.annotations.GenericGenerator;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
-
 import javax.persistence.*;
-import javax.websocket.OnError;
-import java.util.Set;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "t_role")
+@Getter
 public class Role implements GrantedAuthority {
 
     @Id
+    @Column(name = "id")
     private String id;
 
+    @Setter
+    @Column(name = "name")
     private String name;
 
+    @Setter
     @Transient
     @OneToOne(mappedBy = "roles")
     private User users;
-
-    public Role() {
-    }
 
     public Role(String  id) {
         this.id = id;
@@ -30,30 +32,6 @@ public class Role implements GrantedAuthority {
     public Role(String id, String name) {
         this.id = id;
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public User getUsers() {
-        return users;
-    }
-
-    public void setUsers(User users) {
-        this.users = users;
     }
 
     @Override

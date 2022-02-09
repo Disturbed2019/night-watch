@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -64,79 +65,11 @@
     <main class="main">
         <div class="container">
             <div class="movies__list">
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/alien.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/28days.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/constantine.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/devil_below.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/it.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/mirors.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/new_z.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/night.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/alien.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/28days.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/constantine.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/devil_below.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/it.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/mirors.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/new_z.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/night.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/alien.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/28days.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/constantine.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/devil_below.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/it.jpeg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/mirors.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/new_z.jpg" alt="">
-                </a>
-                <a class="movies__link" href="#">
-                    <img src="../../images/posters/night.jpeg" alt="">
-                </a>
-
+                <c:forEach var="filmList" items="${filmList}">
+                    <a class="movies__link" href="/movie-page-${filmList.getId()}">
+                        <img src="${filmList.getPreviewImg()}" alt="">
+                    </a>
+                </c:forEach>
             </div>
         </div>
     </main>
