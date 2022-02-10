@@ -23,9 +23,19 @@
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="actors.jsp">Actors</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="/registration">Sign in</a>
-                        </li>
+                        <c:if test="${userId == null}">
+                                                  <li class="menu__list-item">
+                                                      <a class="menu__list-link" href="/login">Sign in</a>
+                                                  </li>
+                                                      <li class="menu__list-item">
+                                                          <a class="menu__list-link" href="/registration">Sign up</a>
+                                                      </li>
+                                                  </c:if>
+                                                  <c:if test="${userId != null}">
+                                                      <li class="menu__list-item">
+                                                          <a class="menu__list-link" href="/logout">Logout</a>
+                                                      </li>
+                                                  </c:if>
                     </ul>
                 </nav>
 

@@ -11,17 +11,12 @@
             CREATE TABLE IF NOT EXISTS t_user (
             id varchar(100) PRIMARY KEY,
             username varchar(20) NOT NULL,
-            password varchar(100) NOT NULL
+            password varchar(100) NOT NULL,
+            role varchar(15) NOT NULL
             );
         </sql>
         <sql>
-            CREATE TABLE IF NOT EXISTS t_role (
-            id varchar(100) PRIMARY KEY,
-            name varchar(50) NOT NULL
-            );
-        </sql>
-        <sql>
-            CREATE TABLE IF NOT EXISTS film (
+            CREATE TABLE IF NOT EXISTS t_film (
             id varchar(100) PRIMARY KEY,
             category varchar(100) NOT NULL,
             description varchar(500) NOT NULL,
@@ -34,15 +29,8 @@
             );
         </sql>
         <sql>
-            CREATE TABLE IF NOT EXISTS t_user_roles (
-            user_id varchar(100) PRIMARY KEY,
-            roles_id varchar(100) NOT NULL
-            )
-        </sql>
-        <sql>
-            INSERT INTO t_role(id, name) VALUES (1, 'ROLE_USER'), (2, 'ROLE_ADMIN');
-            INSERT INTO t_user(id, password, username) VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 'ADMIN', 'ADMIN');
-            INSERT INTO t_user_roles(user_id, roles_id) VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 2);
+            INSERT INTO t_user(id, password, username, role) VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 'ADMIN',
+            'ADMIN', 'ADMIN');
         </sql>
     </changeSet>
 </databaseChangeLog>

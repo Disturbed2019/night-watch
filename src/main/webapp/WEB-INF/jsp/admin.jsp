@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${role != 'ADMIN'}">
+    <c:redirect url="/"/>
+</c:if>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +21,14 @@
                             <a class="menu__list-link active" href="/">Home</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="./movie_page">Movies</a>
+                            <a class="menu__list-link" href="/movies">Movies</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="./actors.html">Actors</a>
                         </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="/login">Sign in</a>
-                        </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="/registration">Sign Up</a>
-                        </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="/logout">Logout</a>
+                            </li>
                     </ul>
                 </nav>
 

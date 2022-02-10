@@ -24,9 +24,19 @@
                           <li class="menu__list-item">
                               <a class="menu__list-link" href="actors.jsp">Actors</a>
                           </li>
+                          <c:if test="${userId == null}">
                           <li class="menu__list-item">
-                              <a class="menu__list-link" href="/login_form">Sign in</a>
+                              <a class="menu__list-link" href="/login">Sign in</a>
                           </li>
+                              <li class="menu__list-item">
+                                  <a class="menu__list-link" href="/registration">Sign up</a>
+                              </li>
+                          </c:if>
+                          <c:if test="${userId != null}">
+                              <li class="menu__list-item">
+                                  <a class="menu__list-link" href="/logout">Logout</a>
+                              </li>
+                          </c:if>
                       </ul>
                   </nav>
 
@@ -77,11 +87,17 @@
                         <p class="top__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eligendi fuga
                             nesciunt omnis recusandae? Aut explicabo inventore labore officiis quasi!</p>
                         <div class="top__buttons">
-                            <a class="button top__buttons-watch" data-fancybox href="https://www.youtube.com/watch?v=IisU-JHj_fU">
+                            <c:if test="${userId == null}">
+                                <a class="button top__buttons-watch" href="/registration">
+                            </c:if>
+                            <c:if test="${userId != null}">
+                                <a class="button top__buttons-watch" data-fancybox href="https://www.youtube.com/watch?v=IisU-JHj_fU">
+                            </c:if>
                                 <svg width="15" height="18" viewBox="0 0 15 18"  xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.2015 10.3932L2.76751 17.7762C1.79716 18.4021 0.55188 17.6442 0.55188 16.3824V1.61647C0.55188 0.356646 1.79536 -0.403248 2.76751 0.224664L14.2015 7.60763C14.4222 7.74786 14.6057 7.95055 14.7333 8.19516C14.8609 8.43977 14.9281 8.71759 14.9281 9.00043C14.9281 9.28328 14.8609 9.5611 14.7333 9.80571C14.6057 10.0503 14.4222 10.253 14.2015 10.3932Z" />
                                 </svg>Watch
                             </a>
+
                             <button class="button top__buttons-more">More information</button>
                         </div>
                     </div>
