@@ -1,44 +1,45 @@
 package by.overone.it.controller;
 
-import by.overone.it.entity.User;
 import by.overone.it.service.UserService;
+import by.overone.it.validation.Validation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class RegistrationController {
+
+    @Autowired
+    private Validation validation;
 
     @Autowired
     private UserService userService;
 
     @GetMapping("/registration")
     public String registration(Model model) {
-        model.addAttribute("userForm", new User());
-
         return "registration";
     }
 
-    @PostMapping("/registration")
-    public String addUser(@ModelAttribute("userForm") @Valid User userForm, BindingResult bindingResult, Model model) {
+    @PostMapping("/check-registration")
+    public String addUser(
+            @RequestParam("username") String username,
+            @RequestParam("password") String password,
+            @RequestParam("repassword") String repassword,
+            Model model
+    ) {
 
-        if (bindingResult.hasErrors()) {
-            return "registration";
-        }
-        if (!userForm.getPassword().equals(userForm.getPasswordConfirm())){
-            model.addAttribute("passwordError", "Пароли не совпадают");
-            return "registration";
-        }
-        if (!userService.saveUser(userForm)){
-            model.addAttribute("usernameError", "Пользователь с таким именем уже существует");
-            return "registration";
+        List<String> errorMessages = validation.registrationValidation(username, password, repassword);
+
+        if (errorMessages.isEmpty()) {
+            userService.saveUser(username, password);
+        } else {
+            model.addAttribute("exception", errorMessages.get(0));
+            return "redirect:/registration";
         }
 
         return "redirect:/";
