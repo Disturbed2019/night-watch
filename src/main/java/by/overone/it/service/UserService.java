@@ -32,15 +32,8 @@ public class UserService implements UserDetailsService {
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
-
-        if (user == null) {
-            throw new UsernameNotFoundException("User not found");
-        }
-
-        return user;
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     public User findUserById(String userId) {
@@ -52,17 +45,11 @@ public class UserService implements UserDetailsService {
         return userRepository.findAll();
     }
 
-    public boolean saveUser(User user) {
+    public void saveUser(User user) {
         User userFromDB = userRepository.findByUsername(user.getUsername());
-
-        if (userFromDB != null) {
-            return false;
-        }
-
         user.setRoles(Collections.singleton(new Role("1", "ROLE_USER")));
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userRepository.save(user);
-        return true;
     }
 
     public boolean deleteUser(String userId) {
