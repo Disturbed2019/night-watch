@@ -65,31 +65,31 @@ public class FilmService {
         filmRepository.updateRating(id, rating);
     }
 
-    public List<Film> romanceList() {
+    public List<Film> getRomanceFilms() {
         return filmRepository.getRomanceFilms();
     }
 
-    public List<Film> historicalList() {
+    public List<Film> getHistoricalFilms() {
         return filmRepository.getHistoricalFilms();
     }
 
-    public List<Film> dramaList() {
+    public List<Film> getDramaFilms() {
         return filmRepository.getDramaFilms();
     }
 
-    public List<Film> sciFiList() {
+    public List<Film> getSciFiFilms() {
         return filmRepository.getSciFiFilms();
     }
 
-    public List<Film> actionList() {
+    public List<Film> getActionFilms() {
         return filmRepository.getActionFilms();
     }
 
-    public List<Film> comedyList() {
+    public List<Film> getComedyFilms() {
         return filmRepository.getComedyFilms();
     }
 
-    public List<Film> horrorList() {
+    public List<Film> getHorrorsFilms() {
         return filmRepository.getHorrorFilms();
     }
 }
