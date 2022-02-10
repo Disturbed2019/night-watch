@@ -28,7 +28,7 @@ public class MainController {
         model.addAttribute("drama", dramaList);
         model.addAttribute("historical", historicalList);
         model.addAttribute("action", actionList);
-        model.addAttribute("sci-fi", sciFiList);
+        model.addAttribute("sciFi", sciFiList);
         model.addAttribute("romance", romanceList);
         model.addAttribute("comedy", comedyList);
         return "index";

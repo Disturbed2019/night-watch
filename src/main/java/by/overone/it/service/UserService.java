@@ -48,7 +48,7 @@ public class UserService implements UserDetailsService {
         return userFromDb.orElse(new User());
     }
 
-    public List<User> allUsers() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
@@ -71,10 +71,5 @@ public class UserService implements UserDetailsService {
             return true;
         }
         return false;
-    }
-
-    public List<User> usergtList(String idMin) {
-        return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)
-                .setParameter("paramId", idMin).getResultList();
     }
 }
