@@ -30,7 +30,7 @@ public class MovieController {
         return "movie-page";
     }
 
-    /*@GetMapping("/romance")
+    @GetMapping("/romance")
     public String showRomancePage(Model model) {
         List<Film> romanceList = filmService.getRomanceFilms();
         model.addAttribute("filmList", romanceList);
@@ -52,30 +52,30 @@ public class MovieController {
     }
 
     @GetMapping("/sci-fi")
-    public String showRomancePage(Model model) {
-        List<Film> sciFiList = filmService.sciFiFilms();
+    public String showSciFiPage(Model model) {
+        List<Film> sciFiList = filmService.getSciFiFilms();
         model.addAttribute("filmList", sciFiList);
         return "movies";
     }
 
     @GetMapping("/horror")
-    public String showRomancePage(Model model) {
-        List<Film> horrorList = filmService.getHorrorFilms();
+    public String showHorrorsPage(Model model) {
+        List<Film> horrorList = filmService.getHorrorsFilms();
         model.addAttribute("filmList", horrorList);
         return "movies";
     }
 
     @GetMapping("/comedy")
-    public String showRomancePage(Model model) {
+    public String showComedyPage(Model model) {
         List<Film> comedyList = filmService.getComedyFilms();
         model.addAttribute("filmList", comedyList);
         return "movies";
     }
 
     @GetMapping("/historical")
-    public String showRomancePage(Model model) {
+    public String showHistoricalPage(Model model) {
         List<Film> historicalList = filmService.getHistoricalFilms();
         model.addAttribute("filmList", historicalList);
         return "movies";
-    }*/
+    }
 }

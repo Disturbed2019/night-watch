@@ -17,7 +17,7 @@ public class MainController {
 
     @GetMapping("/")
     public String home(Model model) {
-       /* List<Film> horrorsList = filmService.getHorrorFilms();
+        List<Film> horrorsList = filmService.getHorrorsFilms();
         List<Film> dramaList = filmService.getDramaFilms();
         List<Film> historicalList = filmService.getHistoricalFilms();
         List<Film> actionList = filmService.getActionFilms();
@@ -30,7 +30,7 @@ public class MainController {
         model.addAttribute("action", actionList);
         model.addAttribute("sci-fi", sciFiList);
         model.addAttribute("romance", romanceList);
-        model.addAttribute("comedy", comedyList);*/
+        model.addAttribute("comedy", comedyList);
         return "index";
     }
 }
