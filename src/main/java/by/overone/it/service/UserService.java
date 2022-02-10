@@ -1,36 +1,19 @@
 package by.overone.it.service;
 
-import by.overone.it.entity.Role;
 import by.overone.it.entity.User;
-import by.overone.it.repository.RoleRepository;
+import by.overone.it.enums.RoleEnum;
 import by.overone.it.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService implements UserDetailsService {
-
-    @PersistenceContext
-    private EntityManager em;
+public class UserService {
 
     @Autowired
     UserRepository userRepository;
-
-    @Autowired
-    RoleRepository roleRepository;
-
-    @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
@@ -45,18 +28,20 @@ public class UserService implements UserDetailsService {
         return userRepository.findAll();
     }
 
-    public void saveUser(User user) {
-        User userFromDB = userRepository.findByUsername(user.getUsername());
-        user.setRoles(Collections.singleton(new Role("1", "ROLE_USER")));
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+    public void saveUser(String username, String password) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setRole(RoleEnum.USER.name());
+        saveUser(user);
+    }
+
+    private void saveUser(User user) {
         userRepository.save(user);
     }
 
-    public boolean deleteUser(String userId) {
-        if (userRepository.findById(userId).isPresent()) {
-            userRepository.deleteById(userId);
-            return true;
-        }
-        return false;
+
+    public void deleteUser(User user) {
+        userRepository.delete(user);
     }
 }
