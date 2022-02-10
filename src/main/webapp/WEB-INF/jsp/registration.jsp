@@ -72,6 +72,7 @@
                         <!--                       вставка формы регистрации -->
                         <form:form method="POST" modelAttribute="userForm" cssClass="form">
                         <h2 class="form__title">Registration</h2>
+                        ${exception}
                         <div class="form__content">
                             <div>
                                 <form:input type="text" path="username" placeholder="Username"
