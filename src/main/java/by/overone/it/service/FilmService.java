@@ -37,31 +37,31 @@ public class FilmService {
         filmRepository.updateCategory(id, category);
     }
 
-    public  void updateTitleFilm(String id, String title) {
+    public void updateTitleFilm(String id, String title) {
         filmRepository.updateTitle(id, title);
     }
 
-    public  void updateYearFilm(String id, String year) {
+    public void updateYearFilm(String id, String year) {
         filmRepository.updateYear(id, year);
     }
 
-    public  void updateBgImgFilm(String id, String bgImg) {
+    public void updateBgImgFilm(String id, String bgImg) {
         filmRepository.updateBgImg(id, bgImg);
     }
 
-    public  void updateDescriptionFilm(String id, String description) {
+    public void updateDescriptionFilm(String id, String description) {
         filmRepository.updateDescription(id, description);
     }
 
-    public  void updatePreviewImgFilm(String id, String previewImg) {
+    public void updatePreviewImgFilm(String id, String previewImg) {
         filmRepository.updatePreviewImg(id, previewImg);
     }
 
-    public  void updateTrailerLinkFilm(String id, String trailerLink) {
+    public void updateTrailerLinkFilm(String id, String trailerLink) {
         filmRepository.updateTrailerLink(id, trailerLink);
     }
 
-    public  void updateRatingFilm(String id, String rating) {
+    public void updateRatingFilm(String id, String rating) {
         filmRepository.updateRating(id, rating);
     }
 
