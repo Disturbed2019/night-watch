@@ -1,7 +1,6 @@
 package by.overone.it.repository;
 
 import by.overone.it.entity.Film;
-import by.overone.it.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -51,7 +50,6 @@ public interface FilmRepository extends JpaRepository<Film, String> {
     @Modifying
     @Query("update Film f set f.rating=:rating where f.id=:id")
     List<Film> updateRating(@Param("id") String id, @Param("rating") String rating);
-
 
     @Query("from Film where category = 'horror'")
     List<Film> getHorrorFilms();
