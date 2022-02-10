@@ -24,7 +24,7 @@
                             <a class="menu__list-link" href="/movies">Movies</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="./actors.html">Actors</a>
+                            <a class="menu__list-link" href="./actors">Actors</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="/logout">Logout</a>
@@ -66,7 +66,7 @@
             <div class="admin__wrapper">
                 <a class="btn btn__primary" href="/admin/users">Список пользователей</a>
                 <a class="btn btn__primary" href="/admin/films">Список фильмов</a>
-                <a class="btn btn__primary" href="/admin/add-film">Добавить фильм</a>
+                <a class="btn btn__primary" href="/admin/add_film">Добавить фильм</a>
             </div>
             <div class="films">
                 <ul class="films__list">
@@ -77,7 +77,7 @@
                             </div>
                             <p>"${film.getTitle()}"</p>
                             <div class="films__btns">
-                                <button class="btn btn__primary delete_film">Удалить фильм</button>
+                                <a href="/admin/films/${film.getId()}" id="${film.getId()}" class="btn btn__primary delete_film">Удалить фильм</a>
                                 <a href="/admin/edit-film" class="btn films__delete">Редактировать фильм</a>
                             </div>
                         </li>
