@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
+
 @Component
 public class JsonParser {
 
@@ -42,5 +44,6 @@ public class JsonParser {
                 service.saveFilm(film);
             }
         }
+        LOGGER.info("Inserting completed");
     }
 }
