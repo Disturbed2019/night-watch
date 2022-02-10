@@ -2,12 +2,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <c:import url="./components/head.jsp"/>
     <title>title</title>
-    <link rel="stylesheet" href="../../css/style.min.css">
 </head>
 <body>
 <div class="wrapper single__wrapper" style="background-image: url('../.${film.getBgImg()}')">
@@ -94,13 +91,7 @@
         </section>
 
     </main>
-    <footer class="footer">
-       <div class="container">
-           <a class="footer__logo-link" href="/">
-               <img src="../../icons/logo.svg" alt="" >
-           </a>
-       </div>
-    </footer>
+
 </div>
 
 <script src="../../js/main.js"></script>

@@ -3,19 +3,16 @@
 <html lang="en">
 <head>
     <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <c:import url="${pageContext.request.contextPath}/WEB-INF/jsp/components/head.jsp"/>
   <title>Document</title>
-  <link rel="stylesheet" href="../../css/style.min.css">
+
 </head>
 <body>
 <div class="wrapper">
     <header class="header">
           <div class="container">
               <div class="header__inner">
-                  <a href="/" class="logo"><img src="../../icons/logo.svg" alt="logo"></a>
+                  <a href="/" class="logo"><img src="${pageContext.request.contextPath}/icons/logo.svg" alt="logo"></a>
                   <nav class="menu">
                       <ul class="menu__list">
                           <li class="menu__list-item">
@@ -39,21 +36,21 @@
                           <li class="menu-account__list-item">
                               <a class="menu-account__list-link" href="#">
                                   <svg class="icon">
-                                    <use xlink:href="./icons/sprite.svg#search"></use>
+                                    <use xlink:href="${pageContext.request.contextPath}/icons/sprite.svg#search"></use>
                                   </svg>
                               </a>
                           </li>
                           <li class="menu-account__list-item">
                               <a class="menu-account__list-link" href="#">
                                   <svg class="icon">
-                                      <use xlink:href="./icons/sprite.svg#notification"></use>
+                                      <use xlink:href="${pageContext.request.contextPath}/icons/sprite.svg#notification"></use>
                                   </svg>
                               </a>
                           </li>
                           <li class="menu-account__list-item">
-                              <a class="menu-account__list-link" href="/registration">
+                              <a class="menu-account__list-link" href="/">
                                   <svg class="icon">
-                                      <use xlink:href="./icons/sprite.svg#account"></use>
+                                      <use xlink:href="${pageContext.request.contextPath}/icons/sprite.svg#account"></use>
                                   </svg>
                               </a>
                           </li>
@@ -62,7 +59,6 @@
               </div>
           </div>
       </header>
-
     <main class="main">
         <section class="top">
             <div class="container">
@@ -153,46 +149,7 @@
                    <h3 class="slider__title"><span class="title-blue"></span>Horror</h3>
                    <div class="swiper slider__horror">
                        <div class="swiper-wrapper ">
-                           <div class="swiper-slide ">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/alien.jpg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide ">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/28days.jpg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide ">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/constantine.jpg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/devil_below.jpeg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide ">
-                               <a href="movie_single_page.jsp">
-                                   <img class="slider__item" src="../../images/posters/it.jpeg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide ">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/mirors.jpg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide ">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/new_z.jpg" alt="">
-                               </a>
-                           </div>
-                           <div class="swiper-slide">
-                               <a href="#">
-                                   <img class="slider__item" src="../../images/posters/night.jpeg" alt="">
-                               </a>
-                           </div>
+                            <c:import url="./components/sliders/horror.jsp"/>
                        </div>
 
                    </div>
@@ -218,46 +175,7 @@
                     <h3 class="slider__title"><span class="title-blue"></span>Drama</h3>
                     <div class="swiper slider__drama">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide ">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/alien.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/28days.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/constantine.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/devil_below.jpeg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/it.jpeg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/mirors.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/new_z.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                <img class="slider__item" src="../../images/posters/night.jpeg" alt="">
-                                </a>
-                            </div>
+                            <c:import url="./components/sliders/drama.jsp"/>
                         </div>
 
                     </div>
@@ -283,30 +201,7 @@
                     <h3 class="slider__title"><span class="title-blue"></span>Historical</h3>
                     <div class="swiper slider__historical">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide ">
-                                <img class="slider__item" src="../../images/posters/alien.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide ">
-                                <img class="slider__item" src="../../images/posters/28days.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide ">
-                                <img class="slider__item" src="../../images/posters/constantine.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="slider__item" src="../../images/posters/devil_below.jpeg" alt="">
-                            </div>
-                            <div class="swiper-slide ">
-                                <img class="slider__item" src="../../images/posters/it.jpeg" alt="">
-                            </div>
-                            <div class="swiper-slide ">
-                                <img class="slider__item" src="../../images/posters/mirors.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide ">
-                                <img class="slider__item" src="../../images/posters/new_z.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="slider__item" src="../../images/posters/night.jpeg" alt="">
-                            </div>
+                            <c:import url="./components/sliders/history.jsp"/>
                         </div>
 
                     </div>
@@ -332,30 +227,7 @@
                     <h3 class="slider__title"><span class="title-blue"></span>Action</h3>
                     <div class="swiper slider__action">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide ">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/alien.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/28days.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/constantine.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/devil_below.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/it.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/mirors.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/new_z.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a  href="#"><img class="slider__item" src="../../images/posters/night.jpeg" alt=""></a>
-                            </div>
+                            <c:import url="./components/sliders/action.jsp"/>
                         </div>
 
                     </div>
@@ -380,30 +252,7 @@
                     <h3 class="slider__title"><span class="title-blue"></span>Sci-fi</h3>
                     <div class="swiper slider__sci-fi">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/alien.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/28days.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/constantine.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img class="slider__item" src="../../images/posters/devil_below.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/it.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/mirors.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/new_z.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img class="slider__item" src="../../images/posters/night.jpeg" alt=""></a>
-                            </div>
+                            <c:import url="./components/sliders/sci.jsp"/>
                         </div>
 
                     </div>
@@ -429,30 +278,7 @@
                     <h3 class="slider__title"><span class="title-blue"></span>Romance</h3>
                     <div class="swiper slider__romance">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/alien.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/28days.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/constantine.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img class="slider__item" src="../../images/posters/devil_below.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/it.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/mirors.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/new_z.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img class="slider__item" src="../../images/posters/night.jpeg" alt=""></a>
-                            </div>
+                            <c:import url="./components/sliders/romance.jsp"/>
                         </div>
 
                     </div>
@@ -478,30 +304,7 @@
                     <h3 class="slider__title"><span class="title-blue"></span>Comedy</h3>
                     <div class="swiper slider__comedy">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/alien.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/28days.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/constantine.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img class="slider__item" src="../../images/posters/devil_below.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/it.jpeg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/mirors.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide ">
-                                <a href="#"><img class="slider__item" src="../../images/posters/new_z.jpg" alt=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#"><img class="slider__item" src="../../images/posters/night.jpeg" alt=""></a>
-                            </div>
+                            <c:import url="./components/sliders/comedy.jsp"/>
                         </div>
 
                     </div>
@@ -670,7 +473,7 @@
                             <div class="swiper-slide">
                                 <a href="#" class="slider__actors-wrapper">
                                     <div class="box">
-                                        <img class="slider__actors-img" src="../../images/actors/act-6.jpg" alt="img">
+                                        <img class="slider__actors-img" src="/images/actors/act-6.jpg" alt="img">
                                         <p class="slider__actors-name">Morgan O'Neill</p>
                                     </div>
                                 </a>
@@ -763,81 +566,10 @@
             </div>
         </section>
     </main>
-
-
-
-
-
-
-
-
-
-    <footer class="footer">
-      <div class="footer__content">
-        <div class="container">
-          <div class="footer__inner">
-              <div class="footer__logo">
-                  <img src="../../icons/logo.svg" alt="" class="logo">
-                  <ul class="footer__social-list">
-                      <li class="footer__social-item">
-                          <a href="#" class="footer__social-link">
-                              <svg class="icon">
-                                  <use xlink:href="./icons/social-sprite.svg#face"></use>
-                              </svg>
-                          </a>
-
-                      </li>
-                      <li class="footer__social-item">
-                          <a href="#" class="footer__social-link">
-                              <svg class="icon">
-                                  <use xlink:href="./icons/social-sprite.svg#twit"></use>
-                              </svg>
-                          </a>
-                      </li>
-                      <li class="footer__social-item">
-                          <a href="#" class="footer__social-link">
-                              <svg class="icon">
-                                  <use xlink:href="./icons/social-sprite.svg#link"></use>
-                              </svg>
-                          </a>
-                      </li>
-                      <li class="footer__social-item">
-                          <a href="#" class="footer__social-link">
-                              <svg class="icon">
-                                  <use xlink:href="./icons/social-sprite.svg#inst"></use>
-                              </svg>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-              <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Voice over and Subtitle</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Media Center</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Privacy</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Contact us</a></li>
-              </ul>
-              <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Voice Description</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Investor Relations</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Legal Provisions</a></li>
-              </ul>
-              <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Help Center</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Job Opportunities</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Cookies Preferences</a></li>
-              </ul>
-              <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Gift Cards</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Terms of Use</a></li>
-                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Corporate Informations</a></li>
-              </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <c:import url="${pageContext.request.contextPath}/WEB-INF/jsp/components/footer.jsp"/>
 </div>
 
-  <script src="../../js/main.js"></script>
+  <script src="${pageContext.request.contextPath}/js/main.js"></script>
 </body>
 
 </html>
