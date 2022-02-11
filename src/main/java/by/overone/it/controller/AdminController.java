@@ -2,7 +2,6 @@ package by.overone.it.controller;
 
 import by.overone.it.entity.Film;
 import by.overone.it.entity.User;
-import by.overone.it.file_saver.FileSaver;
 import by.overone.it.service.FilmService;
 import by.overone.it.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,5 +61,4 @@ public class AdminController {
         filmService.deleteById(id);
         return "redirect:/admin/films";
     }
-
 }

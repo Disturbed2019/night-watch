@@ -31,17 +31,17 @@ public class JsonParser {
 
         if (service.findFirst("horror") == null) {
             for (Object o : array) {
-                film = new Film();
                 object = (JSONObject) o;
-                film.setCategory(String.valueOf(object.get("category")));
-                film.setTitle(String.valueOf(object.get("title")));
-                film.setYear(String.valueOf(object.get("year")));
-                film.setBgImg(String.valueOf(object.get("bg_img")));
-                film.setDescription(String.valueOf(object.get("description")));
-                film.setPreviewImg(String.valueOf(object.get("preview_img")));
-                film.setTrailerLink(String.valueOf(object.get("trailer_link")));
-                film.setRating(String.valueOf(object.get("rating")));
-                service.saveFilm(film);
+                service.saveFilm(
+                        String.valueOf(object.get("category")),
+                        String.valueOf(object.get("title")),
+                        String.valueOf(object.get("year")),
+                        String.valueOf(object.get("bg_img")),
+                        String.valueOf(object.get("description")),
+                        String.valueOf(object.get("preview_img")),
+                        String.valueOf(object.get("trailer_link")),
+                        String.valueOf(object.get("rating"))
+                );
             }
         }
         LOGGER.info("Inserting completed");
