@@ -70,15 +70,16 @@
                 <div class="authorization__form-wrapper">
                     <div class="authorization__login " data-tabs-form="login">
 
-                    <form method="POST" action="/check-login" class="form">
-                        <h2 class="form__title">Sign in</h2>
-                         <c:out value="${exception}" default=" "> </c:out>
-                        <div class="form__content">
-                            <input name="username" type="text" path="username" placeholder="Username" autofocus="true"/>
-                            <input name="password" type="password" path="password" placeholder="Password"/>
-                            <button class="btn btn__form" type="submit">Sign in</button>
-                        </div>
-                    </form>
+                        <form method="POST" action="/check-login" class="form">
+                            <h2 class="form__title">Sign in</h2>
+                            <c:out value="${exception}" default=" "> </c:out>
+                            <div class="form__content">
+                                <input name="username" type="text" path="username" placeholder="Username"
+                                       autofocus="true"/>
+                                <input name="password" type="password" path="password" placeholder="Password"/>
+                                <button class="btn btn__form" type="submit">Sign in</button>
+                            </div>
+                        </form>
 
                     </div>
                     <div class="authorization__register hidden " data-tabs-form="register">
