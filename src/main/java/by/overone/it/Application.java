@@ -1,6 +1,7 @@
 package by.overone.it;
 
 import by.overone.it.JSON.JsonParser;
+import by.overone.it.controller.AdminController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,12 +13,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import java.io.File;
+
 @SpringBootApplication
 @ComponentScan("by.overone.it")
 @EntityScan("by.overone.it.entity")
 @EnableJpaRepositories("by.overone.it.repository")
 public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
+        new File(AdminController.uploadDirectoryPosters).mkdir();
+        new File(AdminController.uploadDirectoryBackground).mkdir();
         SpringApplication.run(Application.class);
     }
 
