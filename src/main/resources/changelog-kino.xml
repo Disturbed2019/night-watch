@@ -29,8 +29,8 @@
             );
         </sql>
         <sql>
-            INSERT INTO t_user(id, password, username, role) VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 'ADMIN',
-            'ADMIN', 'ADMIN');
+            INSERT INTO t_user(id, password, username, role)
+            VALUES ('6260861c-88c4-11ec-a8a3-0242ac120002', 'ADMIN', 'ADMIN', 'ADMIN');
         </sql>
     </changeSet>
 </databaseChangeLog>
