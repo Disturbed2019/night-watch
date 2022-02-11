@@ -24,9 +24,6 @@
                           <li class="menu__list-item">
                               <a class="menu__list-link" href="/actors">Actors</a>
                           </li>
-                          <li class="menu__list-item">
-                              <a class="menu__list-link" href="/admin/rest">Rest</a>
-                          </li>
                           <c:if test="${userId == null}">
                           <li class="menu__list-item">
                               <a class="menu__list-link" href="/login">Sign in</a>
