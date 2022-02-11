@@ -22,7 +22,7 @@
                               <a class="menu__list-link" href="/movies">Movies</a>
                           </li>
                           <li class="menu__list-item">
-                              <a class="menu__list-link" href="actors.jsp">Actors</a>
+                              <a class="menu__list-link" href="/actors">Actors</a>
                           </li>
                           <c:if test="${userId == null}">
                           <li class="menu__list-item">
@@ -30,6 +30,11 @@
                           </li>
                               <li class="menu__list-item">
                                   <a class="menu__list-link" href="/registration">Sign up</a>
+                              </li>
+                          </c:if>
+                          <c:if test="${role.equals('ADMIN')}">
+                              <li class="menu__list-item">
+                                  <a class="menu__list-link" href="/admin">Admin</a>
                               </li>
                           </c:if>
                           <c:if test="${userId != null}">
