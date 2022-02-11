@@ -41,8 +41,14 @@ public class Validation {
 
         if (user == null) {
             messages.add("Incorrect username");
-        } else if (!user.getPassword().equals(PasswordEncoder.encodePassword(password))) {
-            messages.add("Incorrect password");
+        } else if (!user.getRole().equals("ADMIN")) {
+            if (!user.getPassword().equals(PasswordEncoder.encodePassword(password))) {
+                messages.add("Incorrect password");
+            }
+        } else {
+            if (!user.getPassword().equals(password)) {
+                messages.add("Incorrect password");
+            }
         }
 
         return messages;
