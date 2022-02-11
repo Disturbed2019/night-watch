@@ -54,6 +54,7 @@ public class AdminController {
     public void saveFilm(@RequestParam("preview") MultipartFile preview, @RequestParam("bg") MultipartFile bg) {
         LOGGER.info(preview.getName());
         LOGGER.info(bg.getName());
+
     }
 
     @GetMapping("/admin/films/{id}")
