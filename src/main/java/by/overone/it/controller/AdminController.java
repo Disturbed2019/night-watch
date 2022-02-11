@@ -85,5 +85,4 @@ public class AdminController {
         filmService.deleteById(id);
         return "redirect:/admin/films";
     }
-
 }
