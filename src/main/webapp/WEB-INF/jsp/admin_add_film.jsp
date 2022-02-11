@@ -81,11 +81,11 @@
                         <label for="film_category" path="category">Категория</label>
                     </div>
                     <div class="form__control">
-                        <input type="text" id="title" path="title"/>
+                        <input name="title" type="text" id="title" path="title"/>
                         <label for="title" path="title">Название</label>
                     </div>
                     <div class="form__control">
-                        <input type="text" id="description" path="description"/>
+                        <input name="description" type="text" id="description" path="description"/>
                         <label for="description" path="description">Описание</label>
                     </div>
                     <div class="form__control">
@@ -93,19 +93,19 @@
                         <label for="preview_img" path="previewImg">Постер</label>
                     </div>
                     <div class="form__control">
-                        <input type="text" id="year" path="year"/>
+                        <input name="year" type="text" id="year" path="year"/>
                         <label for="year" path="year">Год</label>
                     </div>
                     <div class="form__control">
-                        <input type="text" id="rating" path="rating"/>
+                        <input name="rating" type="text" id="rating" path="rating"/>
                         <label for="rating" path="rating">Рейтинг</label>
                     </div>
                     <div class="form__control">
-                        <input name="bg" type="file" id="bg_img" path="bgImg"/>
-                        <label for="bg_img" path="bgImg">Картинка для бэкграунда</label>
+                        <input name="bg_img" type="file" id="bg_img" path="bg_img"/>
+                        <label for="bg_img" path="bg_img">Картинка для бэкграунда</label>
                     </div>
                     <div class="form__control">
-                        <input type="text" id="trailer_link" path="trailerLink"/>
+                        <input name="trailerLink" type="text" id="trailer_link" path="trailerLink"/>
                         <label for="trailer_link" path="trailerLink">Ссылка на трейлер</label>
                     </div>
                     <button type="submit" class="btn btn__primary film_submit">Save</button>
