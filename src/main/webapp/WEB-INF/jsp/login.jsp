@@ -37,13 +37,7 @@
 
                 <nav class="menu-account">
                     <ul class="menu-account__list">
-                        <li class="menu-account__list-item">
-                            <a class="menu-account__list-link" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="./icons/sprite.svg#search"></use>
-                                </svg>
-                            </a>
-                        </li>
+                        <c:import url="components/search.jsp"/>
                         <li class="menu-account__list-item">
                             <a class="menu-account__list-link" href="#">
                                 <svg class="icon">

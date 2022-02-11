@@ -36,13 +36,7 @@
 
                 <nav class="menu-account">
                     <ul class="menu-account__list">
-                        <li class="menu-account__list-item">
-                            <a class="menu-account__list-link" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="${pageContext.request.contextPath}/icons/sprite.svg#search"></use>
-                                </svg>
-                            </a>
-                        </li>
+                        <c:import url="components/search.jsp"/>
                         <li class="menu-account__list-item">
                             <a class="menu-account__list-link" href="#">
                                 <svg class="icon">
@@ -72,50 +66,50 @@
             <div class="add">
 
 
-                <form:form method="post" modelAttribute="film">
-                    <form:hidden path="id"/>
+                <form method="post" action="/admin/add_film" enctype="multipart/form-data">
+                    <hidden path="id"/>
                     <div class="form__control">
-                        <form:select path="category" name="category" id="film_category">
-                            <form:option value="horror">Horror</form:option>
-                            <form:option value="action">Action</form:option>
-                            <form:option value="romance">Romance</form:option>
-                            <form:option value="comedy">Comedy</form:option>
-                            <form:option value="drama">Drama</form:option>
-                            <form:option value="historical">Historical</form:option>
-                            <form:option value="sci-fi">Sci-fi</form:option>
-                        </form:select>
-                        <form:label for="film_category" path="category">Категория</form:label>
+                        <select path="category" name="category" id="film_category">
+                            <option value="horror">Horror</option>
+                            <option value="action">Action</option>
+                            <option value="romance">Romance</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="historical">Historical</option>
+                            <option value="sci-fi">Sci-fi</option>
+                        </select>
+                        <label for="film_category" path="category">Категория</label>
                     </div>
                     <div class="form__control">
-                        <form:input type="text" id="title" path="title"/>
-                        <form:label for="title" path="title">Название</form:label>
+                        <input type="text" id="title" path="title"/>
+                        <label for="title" path="title">Название</label>
                     </div>
                     <div class="form__control">
-                        <form:input type="text" id="description" path="description"/>
-                        <form:label for="description" path="description">Описание</form:label>
+                        <input type="text" id="description" path="description"/>
+                        <label for="description" path="description">Описание</label>
                     </div>
                     <div class="form__control">
-                        <form:input name="image" type="file" id="preview_img" path="previewImg"/>
-                        <form:label for="preview_img" path="previewImg">Постер</form:label>
+                        <input name="preview" type="file" id="preview_img" path="previewImg"/>
+                        <label for="preview_img" path="previewImg">Постер</label>
                     </div>
                     <div class="form__control">
-                        <form:input type="text" id="year" path="year"/>
-                        <form:label for="year" path="year">Год</form:label>
+                        <input type="text" id="year" path="year"/>
+                        <label for="year" path="year">Год</label>
                     </div>
                     <div class="form__control">
-                        <form:input type="text" id="rating" path="rating"/>
-                        <form:label for="rating" path="rating">Рейтинг</form:label>
+                        <input type="text" id="rating" path="rating"/>
+                        <label for="rating" path="rating">Рейтинг</label>
                     </div>
                     <div class="form__control">
-                        <form:input type="file" id="bg_img" path="bgImg"/>
-                        <form:label for="bg_img" path="bgImg">Картинка для бэкграунда</form:label>
+                        <input name="bg" type="file" id="bg_img" path="bgImg"/>
+                        <label for="bg_img" path="bgImg">Картинка для бэкграунда</label>
                     </div>
                     <div class="form__control">
-                        <form:input type="text" id="trailer_link" path="trailerLink"/>
-                        <form:label for="trailer_link" path="trailerLink">Ссылка на трейлер</form:label>
+                        <input type="text" id="trailer_link" path="trailerLink"/>
+                        <label for="trailer_link" path="trailerLink">Ссылка на трейлер</label>
                     </div>
                     <button type="submit" class="btn btn__primary film_submit">Save</button>
-                </form:form>
+                </form>
 
 
                 <%--                <form action="/admin/add_film" id="add__film" >--%>

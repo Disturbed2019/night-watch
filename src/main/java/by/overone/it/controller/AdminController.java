@@ -2,14 +2,18 @@ package by.overone.it.controller;
 
 import by.overone.it.entity.Film;
 import by.overone.it.entity.User;
+import by.overone.it.file_saver.FileSaver;
 import by.overone.it.service.FilmService;
 import by.overone.it.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+
+import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
 
 @Controller
 @SessionAttributes({"userId", "role"})
@@ -39,17 +43,17 @@ public class AdminController {
         return "admin_films";
     }
 
-//Добавление фильма
+    //Добавление фильма
     @GetMapping("/admin/add_film")
-    public String addFilm(Model model){
+    public String addFilm(Model model) {
         model.addAttribute("film", new Film());
-        return "add_film";
+        return "admin_add_film";
     }
 
     @PostMapping("/admin/add_film")
-    public String addFilm(@ModelAttribute("film") Film film){
-        filmService.saveFilm(film);
-        return "redirect:/admin";
+    public void saveFilm(@RequestParam("preview") MultipartFile preview, @RequestParam("bg") MultipartFile bg) {
+        LOGGER.info(preview.getName());
+        LOGGER.info(bg.getName());
     }
 
     @GetMapping("/admin/films/{id}")
