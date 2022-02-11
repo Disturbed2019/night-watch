@@ -1,5 +1,6 @@
 package by.overone.it.validation;
 
+import by.overone.it.encoder.PasswordEncoder;
 import by.overone.it.entity.User;
 import by.overone.it.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,14 @@ public class Validation {
 
         if (user == null) {
             messages.add("Incorrect username");
-        } else if (!user.getPassword().equals(password)) {
-            messages.add("Incorrect password");
+        } else if (!user.getRole().equals("ADMIN")) {
+            if (!user.getPassword().equals(PasswordEncoder.encodePassword(password))) {
+                messages.add("Incorrect password");
+            }
+        } else {
+            if (!user.getPassword().equals(password)) {
+                messages.add("Incorrect password");
+            }
         }
 
         return messages;

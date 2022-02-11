@@ -96,4 +96,8 @@ public class FilmService {
     public void deleteById(String id){
         filmRepository.deleteById(id);
     }
+
+    public List<Film> getSearchByName(String title) {
+        return filmRepository.getSearchByTitle(title);
+    }
 }

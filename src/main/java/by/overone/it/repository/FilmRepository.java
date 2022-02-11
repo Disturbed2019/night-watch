@@ -71,4 +71,7 @@ public interface FilmRepository extends JpaRepository<Film, String> {
 
     @Query("from Film where category = 'historical'")
     List<Film> getHistoricalFilms();
+
+    @Query("select f from Film f where upper(f.title) like %:title%")
+    List<Film> getSearchByTitle(@Param("title") String title);
 }

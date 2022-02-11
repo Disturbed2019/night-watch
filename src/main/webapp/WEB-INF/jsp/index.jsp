@@ -22,7 +22,7 @@
                               <a class="menu__list-link" href="/movies">Movies</a>
                           </li>
                           <li class="menu__list-item">
-                              <a class="menu__list-link" href="actors.jsp">Actors</a>
+                              <a class="menu__list-link" href="/actors">Actors</a>
                           </li>
                           <li class="menu__list-item">
                               <a class="menu__list-link" href="/admin/rest">Rest</a>
@@ -33,6 +33,11 @@
                           </li>
                               <li class="menu__list-item">
                                   <a class="menu__list-link" href="/registration">Sign up</a>
+                              </li>
+                          </c:if>
+                          <c:if test="${role.equals('ADMIN')}">
+                              <li class="menu__list-item">
+                                  <a class="menu__list-link" href="/admin">Admin</a>
                               </li>
                           </c:if>
                           <c:if test="${userId != null}">
@@ -46,13 +51,14 @@
 
                   <nav class="menu-account">
                       <ul class="menu-account__list">
-                          <li class="menu-account__list-item">
-                              <a class="menu-account__list-link" href="#">
-                                  <svg class="icon">
-                                    <use xlink:href="${pageContext.request.contextPath}/icons/sprite.svg#search"></use>
-                                  </svg>
-                              </a>
-                          </li>
+                          <c:import url="components/search.jsp"/>
+<%--                          <li class="menu-account__list-item">--%>
+<%--                              <a class="menu-account__list-link" href="#">--%>
+<%--                                  <svg class="icon">--%>
+<%--                                    <use xlink:href="${pageContext.request.contextPath}/icons/sprite.svg#search"></use>--%>
+<%--                                  </svg>--%>
+<%--                              </a>--%>
+<%--                          </li>--%>
                           <li class="menu-account__list-item">
                               <a class="menu-account__list-link" href="#">
                                   <svg class="icon">
