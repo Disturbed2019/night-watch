@@ -92,4 +92,8 @@ public class FilmService {
     public List<Film> getHorrorsFilms() {
         return filmRepository.getHorrorFilms();
     }
+
+    public void deleteById(String id){
+        filmRepository.deleteById(id);
+    }
 }

@@ -66,7 +66,7 @@
                 <div class="admin__wrapper">
                     <a class="btn btn__primary" href="/admin/users">Список пользователей</a>
                     <a class="btn btn__primary" href="/admin/films">Список фильмов</a>
-                    <a class="btn btn__primary" href="/admin/add-film">Добавить фильм</a>
+                    <a class="btn btn__primary" href="/admin/add_film">Добавить фильм</a>
                 </div>
           </div>
     </main>

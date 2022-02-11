@@ -7,8 +7,7 @@ import by.overone.it.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,4 +38,24 @@ public class AdminController {
         model.addAttribute("film", filmList);
         return "admin_films";
     }
+
+//Добавление фильма
+    @GetMapping("/admin/add_film")
+    public String addFilm(Model model){
+        model.addAttribute("film", new Film());
+        return "add_film";
+    }
+
+    @PostMapping("/admin/add_film")
+    public String addFilm(@ModelAttribute("film") Film film){
+        filmService.saveFilm(film);
+        return "redirect:/admin";
+    }
+
+    @GetMapping("/admin/films/{id}")
+    public String deleteFilm(@PathVariable("id") String id) {
+        filmService.deleteById(id);
+        return "redirect:/admin/films";
+    }
+
 }
