@@ -13,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
+import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
+
 @Controller
 @SessionAttributes({"userId", "role"})
 public class AdminController {
@@ -41,20 +43,17 @@ public class AdminController {
         return "admin_films";
     }
 
-//Добавление фильма
+    //Добавление фильма
     @GetMapping("/admin/add_film")
-    public String addFilm(Model model){
+    public String addFilm(Model model) {
         model.addAttribute("film", new Film());
-        return "add_film";
+        return "admin_add_film";
     }
 
     @PostMapping("/admin/add_film")
-    public String addFilm(@ModelAttribute("film") Film film,Model model,
-                          @RequestParam(name = "image")
-                                  MultipartFile multipartFile){
-        FileSaver.saveImage(multipartFile);
-        filmService.saveFilm(film);
-        return "redirect:/admin";
+    public void saveFilm(@RequestParam("preview") MultipartFile preview, @RequestParam("bg") MultipartFile bg) {
+        LOGGER.info(preview.getName());
+        LOGGER.info(bg.getName());
     }
 
     @GetMapping("/admin/films/{id}")
