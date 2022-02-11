@@ -1255,6 +1255,41 @@ input:active, input:focus, select:active, select:focus {
   display: block;
 }
 
+.d6 {
+  position: relative;
+}
+
+.d6 input {
+  width: 0;
+  border: none;
+  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.d6 input:focus {
+  width: 250px;
+  z-index: 1;
+  border: 2px solid #2da6f9;
+}
+
+.d6 a {
+  background: transparent;
+  border: none;
+  height: 20px;
+  width: 20px;
+  transform: translateY(-50%);
+  position: absolute;
+  opacity: .5;
+  top: 0;
+  right: 0px;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .header {
   margin-top: 15px;
   position: sticky;
@@ -1320,7 +1355,7 @@ input:active, input:focus, select:active, select:focus {
 
 .menu-account__list-item:not(:first-child) {
   display: inline-block;
-  margin-left: 70px;
+  margin-left: 40px;
 }
 
 .menu-account__list-link {
@@ -1627,6 +1662,10 @@ input:active, input:focus, select:active, select:focus {
   margin: 50px auto;
 }
 
+.admin__btn {
+  color: #2da6f9;
+}
+
 .users__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1640,11 +1679,15 @@ input:active, input:focus, select:active, select:focus {
   justify-content: space-between;
 }
 
+.users__item p {
+  margin: 0 30px;
+}
+
 .films__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 10%;
-  grid-row-gap: 10%;
+  grid-row-gap: 1%;
 }
 
 .films__item {
@@ -1662,6 +1705,12 @@ input:active, input:focus, select:active, select:focus {
 
 .films__delete {
   border: 2px solid #2da6f9;
+  width: 100%;
+  text-align: center;
+}
+
+.films__delete:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .films__btns {
