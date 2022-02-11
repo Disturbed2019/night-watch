@@ -13,8 +13,30 @@ public class FilmService {
     @Autowired
     FilmRepository filmRepository;
 
-    public void saveFilm(Film film) {
+    private void saveFilm(Film film) {
         filmRepository.save(film);
+    }
+
+    public void saveFilm(
+            String category,
+            String title,
+            String year,
+            String bgImgPath,
+            String description,
+            String previewImgPath,
+            String trailerLink,
+            String rating
+    ) {
+        Film film = new Film();
+        film.setCategory(category);
+        film.setTitle(title);
+        film.setYear(year);
+        film.setBgImg(bgImgPath);
+        film.setDescription(description);
+        film.setPreviewImg(previewImgPath);
+        film.setTrailerLink(trailerLink);
+        film.setRating(rating);
+        saveFilm(film);
     }
 
     public Film getFilmById(String id) {
