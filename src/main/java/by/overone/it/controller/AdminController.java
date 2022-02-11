@@ -2,12 +2,14 @@ package by.overone.it.controller;
 
 import by.overone.it.entity.Film;
 import by.overone.it.entity.User;
+import by.overone.it.file_saver.FileSaver;
 import by.overone.it.service.FilmService;
 import by.overone.it.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -47,7 +49,10 @@ public class AdminController {
     }
 
     @PostMapping("/admin/add_film")
-    public String addFilm(@ModelAttribute("film") Film film){
+    public String addFilm(@ModelAttribute("film") Film film,Model model,
+                          @RequestParam(name = "image")
+                                  MultipartFile multipartFile){
+        FileSaver.saveImage(multipartFile);
         filmService.saveFilm(film);
         return "redirect:/admin";
     }

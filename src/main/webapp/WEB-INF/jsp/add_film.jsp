@@ -95,7 +95,7 @@
                         <form:label for="description" path="description">Описание</form:label>
                     </div>
                     <div class="form__control">
-                        <form:input type="file" id="preview_img" path="previewImg"/>
+                        <form:input name="image" type="file" id="preview_img" path="previewImg"/>
                         <form:label for="preview_img" path="previewImg">Постер</form:label>
                     </div>
                     <div class="form__control">
