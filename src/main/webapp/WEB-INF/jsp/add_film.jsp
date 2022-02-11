@@ -25,7 +25,7 @@
                             <a class="menu__list-link" href="/movies">Movies</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="./actors.html">Actors</a>
+                            <a class="menu__list-link" href="/actors">Actors</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="/logout">Logout</a>
@@ -65,9 +65,9 @@
     <main class="main admin">
         <div class="container">
             <div class="admin__wrapper">
-                <a class="btn btn__primary delete_user" href="/admin/users">Список пользователей</a>
-                <a class="btn btn__primary delete_user" href="/admin/films">Список фильмов</a>
-                <a class="btn btn__primary delete_user" href="/admin/add_film">Добавить фильм</a>
+                <a class="btn btn__primary " href="/admin/users">Список пользователей</a>
+                <a class="btn btn__primary " href="/admin/films">Список фильмов</a>
+                <a class="btn btn__primary  admin__btn" href="/admin/add_film">Добавить фильм</a>
             </div>
             <div class="add">
 
@@ -95,7 +95,7 @@
                         <form:label for="description" path="description">Описание</form:label>
                     </div>
                     <div class="form__control">
-                        <form:input type="file" id="preview_img" path="previewImg"/>
+                        <form:input name="image" type="file" id="preview_img" path="previewImg"/>
                         <form:label for="preview_img" path="previewImg">Постер</form:label>
                     </div>
                     <div class="form__control">

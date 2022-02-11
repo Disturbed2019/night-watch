@@ -19,13 +19,13 @@
                             <a class="menu__list-link " href="/">Home</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="movie_page.jsp">Movies</a>
+                            <a class="menu__list-link" href="/movies">Movies</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="actors.jsp">Actors</a>
+                            <a class="menu__list-link" href="/actors">Actors</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link active" href="/login">Sign in</a>
+                            <a class="menu__list-link" href="/login">Sign in</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link active" href="/registration">Sign up</a>
