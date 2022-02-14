@@ -1,5 +1,6 @@
 package by.overone.it.controller;
 
+import by.overone.it.SAVER.PathSave;
 import by.overone.it.entity.Film;
 import by.overone.it.entity.User;
 import by.overone.it.service.FilmService;
@@ -21,9 +22,6 @@ import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
 @Controller
 @SessionAttributes({"userId", "role"})
 public class AdminController {
-
-    public static String uploadDirectoryPosters = System.getProperty("user.dir") + "/src/main/webapp/images/posters";
-    public static String uploadDirectoryBackground = System.getProperty("user.dir") + "/src/main/webapp/images/backgrounds";
 
     @Autowired
     private UserService userService;
@@ -61,20 +59,8 @@ public class AdminController {
                            @RequestParam("category") String category, @RequestParam("title") String title,
                            @RequestParam("year") String year, @RequestParam("description") String description,
                            @RequestParam("trailerLink") String trailerLink, @RequestParam("rating") String rating,
-                           @ModelAttribute(name = "film") Film film) {
-        LOGGER.info(preview.getName());
-        LOGGER.info(bg.getName());
-        StringBuilder stringBuilder = new StringBuilder();
-        Path nameAndPathOfPosters = Paths.get(uploadDirectoryPosters, preview.getOriginalFilename());
-        Path nameAndPathOfBackground = Paths.get(uploadDirectoryBackground, bg.getOriginalFilename());
-        stringBuilder.append(preview.getOriginalFilename() + " ");
-        stringBuilder.append(bg.getOriginalFilename() + " ");
-        try {
-            Files.write(nameAndPathOfPosters, preview.getBytes());
-            Files.write(nameAndPathOfBackground, bg.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                           @ModelAttribute(name = "film") Film film, StringBuilder stringBuilder) {
+        PathSave.getPath(preview, bg);
         filmService.saveFilm(category, title, year, "./images/posters/" + preview.getOriginalFilename(),
                 description, "./images/backgrounds/" + bg.getOriginalFilename(), trailerLink, rating);
         return "admin";

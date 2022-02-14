@@ -1,6 +1,7 @@
 package by.overone.it;
 
 import by.overone.it.JSON.JsonParser;
+import by.overone.it.SAVER.PathSave;
 import by.overone.it.controller.AdminController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -21,8 +22,8 @@ import java.io.File;
 @EnableJpaRepositories("by.overone.it.repository")
 public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
-        new File(AdminController.uploadDirectoryPosters).mkdir();
-        new File(AdminController.uploadDirectoryBackground).mkdir();
+        new File(PathSave.uploadDirectoryPosters).mkdir();
+        new File(PathSave.uploadDirectoryBackground).mkdir();
         SpringApplication.run(Application.class);
     }
 
