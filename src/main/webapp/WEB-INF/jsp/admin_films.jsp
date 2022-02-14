@@ -72,7 +72,7 @@
                             <p>"${film.getTitle()}"</p>
                             <div class="films__btns">
                                 <a href="/admin/films/${film.getId()}" id="${film.getId()}" class="btn btn__primary films__delete">Удалить фильм</a>
-                                <a href="/admin/edit-film" class="btn films__delete">Редактировать фильм</a>
+                                <a href="/admin/edit-film/${film.getId()}" class="btn films__delete">Редактировать фильм</a>
                             </div>
                         </li>
                     </c:forEach>

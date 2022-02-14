@@ -11,13 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
-
-import static org.hibernate.tool.schema.SchemaToolingLogging.LOGGER;
 
 @Controller
 @SessionAttributes({"userId", "role"})
@@ -59,7 +53,7 @@ public class AdminController {
                            @RequestParam("category") String category, @RequestParam("title") String title,
                            @RequestParam("year") String year, @RequestParam("description") String description,
                            @RequestParam("trailerLink") String trailerLink, @RequestParam("rating") String rating,
-                           @ModelAttribute(name = "film") Film film, StringBuilder stringBuilder) {
+                           @ModelAttribute(name = "film") Film film) {
         PathSave.getPath(preview, bg);
         filmService.saveFilm(category, title, year, "./images/posters/" + preview.getOriginalFilename(),
                 description, "./images/backgrounds/" + bg.getOriginalFilename(), trailerLink, rating);
@@ -71,4 +65,12 @@ public class AdminController {
         filmService.deleteById(id);
         return "redirect:/admin/films";
     }
+
+//    Изменение фильма
+    @GetMapping("/admin/edit-film/")
+    public String editFilm(Model model){
+        model.addAttribute("editFilm", new Film());
+        return "admin_edit_film";
+    }
+
 }
