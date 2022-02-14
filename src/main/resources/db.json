@@ -1,25 +1,6 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "name": "Admin",
-      "mail": "qwerty@bk.ru",
-      "pass": "123456",
-      "avatarURL": "",
-      "admin": true
-    },
-    {
-      "id": "2",
-      "name": "User",
-      "mail": "123@bk.ru",
-      "pass": "123456",
-      "avatarURL": "",
-      "admin": false
-    }
-  ],
   "films": [
     {
-      "id": "1",
       "category": "horror",
       "title": "Чужой",
       "year": "1979",
@@ -30,7 +11,6 @@
       "rating": "8.1"
     },
     {
-      "id": "2",
       "category": "horror",
       "title": "28 дней спустя",
       "year": "2002",
@@ -41,7 +21,6 @@
       "rating": "7.5"
     },
     {
-      "id": "3",
       "category": "horror",
       "title": "Новая эра Z",
       "year": "2013",
@@ -52,7 +31,6 @@
       "rating": "6.2"
     },
     {
-      "id": "4",
       "category": "horror",
       "title": "Хребет дьявола",
       "year": "2001",
@@ -63,7 +41,6 @@
       "rating": "7.2"
     },
     {
-      "id": "5",
       "category": "horror",
       "title": "Ночной дозор",
       "year": "2004",
@@ -74,7 +51,6 @@
       "rating": "6.1"
     },
     {
-      "id": "6",
       "category": "horror",
       "title": "Константин",
       "year": "2005",
@@ -85,7 +61,6 @@
       "rating": "6,9"
     },
     {
-      "id": "7",
       "category": "horror",
       "title": "Оно",
       "year": "2017",
@@ -96,7 +71,6 @@
       "rating": "7.3"
     },
     {
-      "id": "8",
       "category": "horror",
       "title": "Зеркала",
       "year": "2008",
@@ -107,7 +81,6 @@
       "rating": "7.1"
     },
     {
-      "id": "9",
       "category": "comedy",
       "title": "Один дома",
       "year": "1990",
@@ -118,7 +91,6 @@
       "rating": "8.3"
     },
     {
-      "id": "10",
       "category": "comedy",
       "title": "Типа копы",
       "year": "2014",
@@ -129,7 +101,6 @@
       "rating": "6.6"
     },
     {
-      "id": "11",
       "category": "comedy",
       "title": "Армагеддец",
       "year": "2013",
@@ -140,7 +111,6 @@
       "rating": "6.7"
     },
     {
-      "id": "12",
       "category": "comedy",
       "title": "Не грози южному централу",
       "year": "1995",
@@ -151,7 +121,6 @@
       "rating": "7.2"
     },
     {
-      "id": "13",
       "category": "comedy",
       "title": "Эйс Вентура",
       "year": "1993",
@@ -162,7 +131,6 @@
       "rating": "7.8"
     },
     {
-      "id": "14",
       "category": "comedy",
       "title": "Большой Лебовски",
       "year": "1998",
@@ -173,7 +141,6 @@
       "rating": "7.8"
     },
     {
-      "id": "15",
       "category": "comedy",
       "title": "Все или ничего",
       "year": "2005",
@@ -184,7 +151,6 @@
       "rating": "7.4"
     },
     {
-      "id": "16",
       "category": "comedy",
       "title": "Няньки",
       "year": "1994",
@@ -195,7 +161,6 @@
       "rating": "7.2"
     },
     {
-      "id": "17",
       "category": "action",
       "title": "Вспомнить все",
       "year": "1990",
@@ -206,7 +171,6 @@
       "rating": "7.5"
     },
     {
-      "id": "18",
       "category": "action",
       "title": "Форсаж 9",
       "year": "2021",
@@ -217,7 +181,6 @@
       "rating": "5.6"
     },
     {
-      "id": "19",
       "category": "action",
       "title": "Дюна",
       "year": "2021",
@@ -228,7 +191,6 @@
       "rating": "7.7"
     },
     {
-      "id": "20",
       "category": "action",
       "title": "Довод",
       "year": "2020",
@@ -239,7 +201,6 @@
       "rating": "7.5"
     },
     {
-      "id": "21",
       "category": "action",
       "title": "Гнев человеческий",
       "year": "2021",
@@ -250,7 +211,6 @@
       "rating": "7.6"
     },
     {
-      "id": "22",
       "category": "action",
       "title": "Ларго Винч: Начало",
       "year": "2008",
@@ -261,7 +221,6 @@
       "rating": "7.0"
     },
     {
-      "id": "23",
       "category": "action",
       "title": "Крепкий орешек",
       "year": "1988",
@@ -272,7 +231,6 @@
       "rating": "8.0"
     },
     {
-      "id": "24",
       "category": "action",
       "title": "На грани",
       "year": "2012",
@@ -283,7 +241,6 @@
       "rating": "7.1"
     },
     {
-      "id": "25",
       "category": "sci-fi",
       "title": "Звездный путь",
       "year": "2009",
@@ -294,7 +251,6 @@
       "rating": "7.7"
     },
     {
-      "id": "26",
       "category": "sci-fi",
       "title": "Послезавтра",
       "year": "2004",
@@ -305,7 +261,6 @@
       "rating": "7.7"
     },
     {
-      "id": "27",
       "category": "sci-fi",
       "title": "Веном 2",
       "year": "2021",
@@ -316,7 +271,6 @@
       "rating": "6.1"
     },
     {
-      "id": "28",
       "category": "sci-fi",
       "title": "Доктор Стрэндж",
       "year": "2016",
@@ -327,7 +281,6 @@
       "rating": "7.5"
     },
     {
-      "id": "29",
       "category": "sci-fi",
       "title": "Стражи галактики",
       "year": "2014",
@@ -338,7 +291,6 @@
       "rating": "7.8"
     },
     {
-      "id": "30",
       "category": "sci-fi",
       "title": "Призрак в доспехах",
       "year": "2017",
@@ -349,7 +301,6 @@
       "rating": "6.4"
     },
     {
-      "id": "31",
       "category": "sci-fi",
       "title": "Люди в черном",
       "year": "1997",
@@ -360,7 +311,6 @@
       "rating": "8.0"
     },
     {
-      "id": "32",
       "category": "sci-fi",
       "title": "Марсианин",
       "year": "2015",
@@ -371,7 +321,6 @@
       "rating": "7.7"
     },
     {
-      "id": "33",
       "category": "drama",
       "title": "Лед",
       "year": "2018",
@@ -382,7 +331,6 @@
       "rating": "6.8"
     },
     {
-      "id": "34",
       "category": "drama",
       "title": "Бурлеск",
       "year": "2010",
@@ -393,7 +341,6 @@
       "rating": "7.5"
     },
     {
-      "id": "35",
       "category": "drama",
       "title": "Бунтарка",
       "year": "2006",
@@ -404,7 +351,6 @@
       "rating": "7.1"
     },
     {
-      "id": "36",
       "category": "drama",
       "title": "Легенда №17",
       "year": "2012",
@@ -415,7 +361,6 @@
       "rating": "8.0"
     },
     {
-      "id": "37",
       "category": "drama",
       "title": "Шоколад",
       "year": "2000",
@@ -426,7 +371,6 @@
       "rating": "7.8"
     },
     {
-      "id": "38",
       "category": "drama",
       "title": "Царство небесное",
       "year": "2005",
@@ -437,7 +381,6 @@
       "rating": "7.6"
     },
     {
-      "id": "39",
       "category": "drama",
       "title": "Время",
       "year": "2021",
@@ -448,7 +391,6 @@
       "rating": "6.4"
     },
     {
-      "id": "40",
       "category": "drama",
       "title": "Выживший",
       "year": "2015",
@@ -459,7 +401,6 @@
       "rating": "7.8"
     },
     {
-      "id": "41",
       "category": "romance",
       "title": "Лекарь",
       "year": "2013",
@@ -470,7 +411,6 @@
       "rating": "7.7"
     },
     {
-      "id": "42",
       "category": "romance",
       "title": "Метод Хитча",
       "year": "2005",
@@ -481,7 +421,6 @@
       "rating": "7.7"
     },
     {
-      "id": "43",
       "category": "romance",
       "title": "Красотка",
       "year": "1990",
@@ -492,7 +431,6 @@
       "rating": "8.0"
     },
     {
-      "id": "44",
       "category": "romance",
       "title": "Красавчик",
       "year": "2007",
@@ -503,7 +441,6 @@
       "rating": "7.5"
     },
     {
-      "id": "45",
       "category": "romance",
       "title": "Бумажные города",
       "year": "2015",
@@ -514,7 +451,6 @@
       "rating": "6.1"
     },
     {
-      "id": "46",
       "category": "romance",
       "title": "Амели",
       "year": "2001",
@@ -525,7 +461,6 @@
       "rating": "8.0"
     },
     {
-      "id": "47",
       "category": "romance",
       "title": "Параллельные миры",
       "year": "2016",
@@ -536,7 +471,6 @@
       "rating": "8.1"
     },
     {
-      "id": "48",
       "category": "romance",
       "title": "Предложение",
       "year": "2009",
@@ -547,7 +481,6 @@
       "rating": "7.6"
     },
     {
-      "id": "49",
       "category": "historical",
       "title": "Форест Гамп",
       "year": "1994",
@@ -558,7 +491,6 @@
       "rating": "8.9"
     },
     {
-      "id": "50",
       "category": "historical",
       "title": "Гладиатор",
       "year": "2000",
@@ -569,7 +501,6 @@
       "rating": "8.6"
     },
     {
-      "id": "51",
       "category": "historical",
       "title": "Черный ястреб",
       "year": "2001",
@@ -580,7 +511,6 @@
       "rating": "7.8"
     },
     {
-      "id": "52",
       "category": "historical",
       "title": "Храброе сердце",
       "year": "1995",
@@ -591,7 +521,6 @@
       "rating": "8.3"
     },
     {
-      "id": "53",
       "category": "historical",
       "title": "Человек на луне",
       "year": "2018",
@@ -602,7 +531,6 @@
       "rating": "7.1"
     },
     {
-      "id": "54",
       "category": "historical",
       "title": "Семь лет в Тибете",
       "year": "1997",
@@ -613,7 +541,6 @@
       "rating": "7.8"
     },
     {
-      "id": "55",
       "category": "historical",
       "title": "Т-34",
       "year": "2018",
@@ -624,7 +551,6 @@
       "rating": "6.5"
     },
     {
-      "id": "56",
       "category": "historical",
       "title": "Мастер меча",
       "year": "2020",
