@@ -73,11 +73,26 @@ public class AdminController {
         return "redirect:/admin/films";
     }
 
-//    Изменение фильма
-    @GetMapping("/admin/edit-film/")
-    public String editFilm(Model model){
-        model.addAttribute("editFilm", new Film());
+    //    Изменение фильма
+    @GetMapping("/admin/edit-film/{id}")
+    public String editFilm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("film", filmService.getFilmById(id));
         return "admin_edit_film";
+    }
+
+    @PostMapping("/admin/edit-film/{id}")
+    public String editFilm(@PathVariable String id, @RequestParam("preview") MultipartFile preview,
+                           @RequestParam("bg_img") MultipartFile bg,
+                           @RequestParam("category") String category, @RequestParam("title") String title,
+                           @RequestParam("year") String year, @RequestParam("description") String description,
+                           @RequestParam("trailerLink") String trailerLink, @RequestParam("rating") String rating) {
+
+        String pathForPosters = "./images/posters/" + preview.getOriginalFilename();
+        String pathForBackground = "./images/backgrounds/" + bg.getOriginalFilename();
+
+        filmService.editFilmById(category, title, year, pathForBackground, description,
+                pathForPosters, trailerLink, rating, id);
+        return "admin_films";
     }
 
 }

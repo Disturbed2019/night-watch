@@ -4,6 +4,7 @@ import by.overone.it.entity.Film;
 import by.overone.it.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -34,6 +35,29 @@ public class FilmService {
         film.setBgImg(bgImgPath);
         film.setDescription(description);
         film.setPreviewImg(previewImgPath);
+        film.setTrailerLink(trailerLink);
+        film.setRating(rating);
+        saveFilm(film);
+    }
+
+    public void editFilmById(
+            String category,
+            String title,
+            String year,
+            String bgImgPath,
+            String description,
+            String previewImgPath,
+            String trailerLink,
+            String rating,
+            @PathVariable("id") String id
+    ) {
+        Film film = filmRepository.getFilmById(id);
+        film.setCategory(category);
+        film.setTitle(title);
+        film.setYear(year);
+//        film.setBgImg(bgImgPath);
+        film.setDescription(description);
+//        film.setPreviewImg(previewImgPath);
         film.setTrailerLink(trailerLink);
         film.setRating(rating);
         saveFilm(film);
