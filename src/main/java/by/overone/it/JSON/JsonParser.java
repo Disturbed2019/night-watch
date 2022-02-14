@@ -68,7 +68,7 @@ public class JsonParser {
         JSONObject sourceJsonObject = (JSONObject) parser.parse(reader);
         JSONObject newJsonObject = new JSONObject();
         JSONArray array = (JSONArray) sourceJsonObject.get("films");
-
+        reader.close();
 
         newJsonObject.put("category", category);
         newJsonObject.put("title", title);
