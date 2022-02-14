@@ -1,5 +1,6 @@
 package by.overone.it.controller;
 
+import by.overone.it.JSON.JsonParser;
 import by.overone.it.SAVER.PathSave;
 import by.overone.it.entity.Film;
 import by.overone.it.entity.User;
@@ -16,6 +17,9 @@ import java.util.List;
 @Controller
 @SessionAttributes({"userId", "role"})
 public class AdminController {
+
+    @Autowired
+    private JsonParser jsonParser;
 
     @Autowired
     private UserService userService;
@@ -54,9 +58,12 @@ public class AdminController {
                            @RequestParam("year") String year, @RequestParam("description") String description,
                            @RequestParam("trailerLink") String trailerLink, @RequestParam("rating") String rating,
                            @ModelAttribute(name = "film") Film film) {
+        String pathForPosters = "./images/posters/" + preview.getOriginalFilename();
+        String pathForBackground = "./images/backgrounds/" + bg.getOriginalFilename();
         PathSave.getPath(preview, bg);
-        filmService.saveFilm(category, title, year, "./images/posters/" + preview.getOriginalFilename(),
-                description, "./images/backgrounds/" + bg.getOriginalFilename(), trailerLink, rating);
+        jsonParser.addFilmInJson(category, title, year, pathForBackground, description, pathForPosters, trailerLink, rating);
+        filmService.saveFilm(category, title, year, pathForPosters,
+                description, pathForBackground, trailerLink, rating);
         return "admin";
     }
 
